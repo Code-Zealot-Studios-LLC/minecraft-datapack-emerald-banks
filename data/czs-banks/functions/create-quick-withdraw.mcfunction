@@ -15,8 +15,6 @@
 #                                                                 #
 ###################################################################
 
-#This function tags players at a banking location to activate deposit or withdraw functions
-
-execute at @e[name=Deposit] run tag @a[distance=..1] add cz_banking_d
-
-execute at @e[name=Withdraw] run tag @a[distance=..1] add cz_banking_w
+summon marker ~ ~ ~ {CustomNameVisible:1b,Tags:["czs-bank-marker","czs-withdraw-marker"],CustomName:'{"text":"Withdraw","color":"green"}'}
+execute at @s run particle minecraft:happy_villager ~ ~ ~ 1 1 1 0.15 1000 force
+execute as @s run playsound minecraft:entity.player.levelup master @s

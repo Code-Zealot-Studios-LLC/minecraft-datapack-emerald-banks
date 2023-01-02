@@ -1,5 +1,3 @@
 {
-  "values": [
-    "cz-banks:reload" 
-   ] 
+	"values": ["czs-banks:reload"]
 }

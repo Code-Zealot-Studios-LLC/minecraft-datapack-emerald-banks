@@ -1,0 +1,5 @@
+scoreboard objectives add czs_currency dummy "Money"
+scoreboard objectives add czs_currency_type dummy "Currency Type"
+scoreboard objectives add czs_bank_particles dummy "Bank Particles"
+scoreboard objectives add czs_is_depositing dummy "Is Depositing?"
+scoreboard objectives add czs_is_withdrawing dummy "Is Withdrawing?"

@@ -15,10 +15,8 @@
 #                                                                 #
 ###################################################################
 
-#This function creates a visible quick withdraw location at the executing player's location
+#This function creates a visible quick deposit location at the executing player's location
 
-summon armor_stand ~ ~ ~ {CustomNameVisible:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,CustomName:"{\"text\":\"Withdraw\",\"color\":\"green\"}"}
-
+summon marker ~ ~ ~ {CustomNameVisible:1b,Tags:["czs-bank-marker","czs-deposit-marker"],CustomName:'{"text":"Deposit","color":"green"}'}
 execute at @s run particle minecraft:happy_villager ~ ~ ~ 1 1 1 0.15 1000 force
-
 execute as @s run playsound minecraft:entity.player.levelup master @s

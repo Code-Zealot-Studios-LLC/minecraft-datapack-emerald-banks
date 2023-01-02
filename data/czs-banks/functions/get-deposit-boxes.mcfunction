@@ -15,10 +15,15 @@
 #                                                                 #
 ###################################################################
 
-#This function creates an invisible quick deposit location at the executing player's location
+#This function gives the executing player the required command_blocks to make deposit boxes
 
-summon armor_stand ~ ~ ~ {CustomNameVisible:0b,NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,CustomName:"{\"text\":\"Deposit\",\"color\":\"green\"}"}
+execute as @s run tellraw @s {"text":"These are for making Bank Deposit Boxes. Put a button or lever on them and they are ready to be used! Available in increments of 1, 32, and 64!","color":"green"}
 
-execute at @s run particle minecraft:happy_villager ~ ~ ~ 1 1 1 0.15 1000 force
+#Deposit Box: 1
+give @s minecraft:command_block{display:{Name:"{\"text\":\"Deposit Box: 1\",\"color\":\"green\",\"italic\":\"true\"}",Lore:["Used to manually deposit 1 currency"]},BlockEntityTag:{Command:"/execute as @p run function czs-banks:deposit-1"}} 1
 
-execute as @s run playsound minecraft:entity.player.levelup master @s
+#Deposit Box: 32
+give @s minecraft:command_block{display:{Name:"{\"text\":\"Deposit Box: 32\",\"color\":\"green\",\"italic\":\"true\"}",Lore:["Used to manually deposit 32 currency"]},BlockEntityTag:{Command:"/execute as @p run function czs-banks:deposit-32"}} 1
+
+#Deposit Box: 64
+give @s minecraft:command_block{display:{Name:"{\"text\":\"Deposit Box: 64\",\"color\":\"green\",\"italic\":\"true\"}",Lore:["Used to manually deposit 64 currency"]},BlockEntityTag:{Command:"/execute as @p run function czs-banks:deposit-64"}} 1

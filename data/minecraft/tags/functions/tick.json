@@ -1,5 +1,3 @@
 {
-  "values": [
-    "cz-banks:main" 
-   ] 
+	"values": ["czs-banks:main"]
 }

@@ -15,11 +15,6 @@
 #                                                                 #
 ###################################################################
 
-function cz-banks:quick-location-tags
-function cz-banks:quick-withdraw
-function cz-banks:quick-deposit
-function cz-banks:quick-location-particles
-function cz-banks:remove-tags
+#This function places particles on all quick deposit and quick withdraw locations
 
-
-
+execute if score $czs_bank_particles czs_bank_particles matches 1 run execute as @e[type=marker,tag=czs-bank-marker] at @s run particle minecraft:happy_villager ~ ~ ~ 0.5 0.15 0.5 0.01 1 force

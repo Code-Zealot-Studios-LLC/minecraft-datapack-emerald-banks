@@ -15,10 +15,9 @@
 #                                                                 #
 ###################################################################
 
-#This function creates a visible quick deposit location at the executing player's location
+#This function gives the executing player the required command_block for checking account balances
 
-summon armor_stand ~ ~ ~ {CustomNameVisible:1b,NoGravity:1b,Invulnerable:1b,Invisible:1b,PersistenceRequired:1b,CustomName:"{\"text\":\"Deposit\",\"color\":\"green\"}"}
+execute as @s run tellraw @s {"text":"These are for making Bank Balance Boxes. Put a button or lever on them and they are ready to be used!","color":"green"}
 
-execute at @s run particle minecraft:happy_villager ~ ~ ~ 1 1 1 0.15 1000 force
-
-execute as @s run playsound minecraft:entity.player.levelup master @s
+#Get Balance Box
+give @s minecraft:command_block{display:{Name:"{\"text\":\"Get Balance Box\",\"color\":\"green\",\"italic\":\"true\"}",Lore:["Used to manually check balance"]},BlockEntityTag:{Command:"/execute as @p run function czs-banks:check-balance"}} 1
